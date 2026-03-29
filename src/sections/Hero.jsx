@@ -3,31 +3,33 @@ import {
   ArrowRight,
   ChevronDown,
   Github,
+  Instagram,
   Linkedin,
-  Twitter,
+  Facebook,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
-  "React",
-  "Next.js",
+  "Python",
   "TypeScript",
+  "PyTorch",
+  "TensorFlow",
+  "Scikit-learn",
+  "Computer Vision",
+  "NLP",
+  "FastAPI",
   "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
   "Docker",
-  "AWS",
-  "Vercel",
-  "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
+  "Docker Compose",
+  "React",
+  "TypeScript",
+  "NumPy",
+  "Pandas",
+  "JavaScript",
+  "CSS",
   "Git",
-  "GitHub Actions",
+  "OpenCV",
 ];
 
 export const Hero = () => {
@@ -69,7 +71,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                AI Engineer 
               </span>
             </div>
 
@@ -85,9 +87,9 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Do Hoang Long — a recent graduate in Computer Science, passionate
+                about Computer Vision and Large Language Models. I build learning projects
+                and prototypes that show problem-solving, teamwork and creative engineering.
               </p>
             </div>
 
@@ -106,9 +108,9 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/longtn232003" },
+                { icon: Instagram, href: "https://www.instagram.com/ry0_doh/" },
+                { icon: Facebook, href: "https://www.facebook.com/hoang.long.191730/" },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -132,7 +134,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src="/profile-photo.png"
                   alt="Pedro Machado"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
@@ -148,9 +150,9 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">Fresh+</div>
                   <div className="text-xs text-muted-foreground">
-                    Years Exp.
+                    Graduate.
                   </div>
                 </div>
               </div>

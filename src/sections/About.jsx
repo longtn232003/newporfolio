@@ -49,30 +49,26 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I'm a passionate AI engineer with a strong foundation in computer science. 
+                My journey started with curiosity about intelligent systems, evolving into expertise in AI technologies like computer vision and large language models.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                I specialize in Python, PyTorch, TensorFlow, and machine learning frameworks, 
+                building everything from innovative prototypes to scalable AI applications. 
+                My approach combines technical innovation with a focus on ethical AI and 
+                real-world impact.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                When I'm not coding, you'll find me exploring new AI research, 
+                contributing to open-source projects, or sharing knowledge with the developer community.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "My mission is to harness the power of AI to solve complex problems 
+                and create intelligent systems that benefit humanity — technologies 
+                that are ethical, innovative, and impactful."
               </p>
             </div>
           </div>

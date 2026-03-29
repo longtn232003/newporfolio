@@ -2,40 +2,40 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Visualify AI - Creating Infographics Platform",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "An AI-powered platform that transforms raw data into visuals with real-time charting and collaborative insights.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
+    tags: ["Python", "OpenAI API", "FastAPI", "Docker", "Alibaba GTE"],
     link: "#",
-    github: "#",
+    github: "https://github.com/longtn232003/Visualifi-AI",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Gympose - AI-Powered Fitness Prototype",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+      "An AI-driven fitness companion that analyzes posture in real-time, provides personalized workout guidance, and delivers smart progress analytics using computer vision models.",
+    image: "/projects/project2.jpg",
+    tags: ["FastAPI", "Python", "PyTorch", "Docker", "Call API"],
     link: "#",
-    github: "#",
+    github: "https://github.com/longtn232003/Gympose-",
   },
   {
-    title: "AI Writing Assistant",
+    title: "QAttention Reinforce Learning",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "Improve Q-learning performance using attention in simulation/control tasks.",
     image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    tags: ["Python", "CV2", "Torch  ", "Numpy", "Matplotlib"],
     link: "#",
-    github: "#",
+    github: "https://github.com/longtn232003/QAttention-Reinforce-Learning",
   },
   {
-    title: "Project Management Tool",
+    title: "Temperature Prediction For Agriculture",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "ML models for temperature forecasting in agriculture help optimize schedules and protect yield.",
     image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    tags: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib",],
     link: "#",
-    github: "#",
+    github: "https://github.com/longtn232003/Predict-Temperature-For-Agricultural",
   },
 ];
 
