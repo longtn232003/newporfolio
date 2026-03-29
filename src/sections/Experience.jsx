@@ -1,40 +1,59 @@
+import { Button } from '../components/Button';
+
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "May 2024",
+    role: "AI for Scientific Research Specialization",
+    company: "Coursera",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-    current: true,
+      "Completed a specialization focused on applying AI in scientific research, including data preprocessing, classification, machine learning model comparison, random forests, and AI applications in drug discovery.",
+    technologies: [
+      "Python",
+      "scikit-learn",
+      "Machine Learning",
+      "Neural Networks",
+      "Random Forests"
+  ],
+  current: false,
+  link: "https://www.coursera.org/account/accomplishments/specialization/FDTHD379Y4XT"
+  },
+
+  {
+    period: "Jun 8, 2024",
+    role: "Python for Data Science, AI & Development",
+    company: "IBM / Coursera",
+    description:
+      "Successfully completed an online non-credit course authorized by IBM, focused on Python for data science, AI, and development.",
+    technologies: ["Python", "Data Science", "AI", "Software Development"],
+    current: false,
+    link: "https://www.coursera.org/account/accomplishments/verify/HJ84DNZQH5H8"
+  },
+ 
+  {
+    period: "Sep 2024 — Dec 2024",
+    role: "On the Job Training Trainee",
+    company: "FPT Software",
+    description:
+      "Successfully completed the On the Job Training program at FPT Software from September 2024 to December 2024.",
+    technologies: ["React","HTML", "CSS", "JavaScript"],
+    current: false,
+    link: "https://drive.google.com/file/d/17J55KUMuA8azFqqaNvM3Dachnad4UyLI/view"
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
-    description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
-    description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
-  },
-  {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
-    current: false,
-  },
+  period: "May 2025",
+  role: "AI Workflow: Machine Learning, Visual Recognition and NLP",
+  company: "IBM / Coursera",
+  description:
+    "Completed an IBM-authorized online course focused on AI workflows across machine learning, visual recognition, and natural language processing.",
+  technologies: [
+    "Machine Learning",
+    "Visual Recognition",
+    "NLP",
+    "AI Workflow"
+  ],
+  current: false,
+  link: "https://www.coursera.org/account/accomplishments/verify/608M6RKCHV1Q"
+}
 ];
 
 export const Experience = () => {
@@ -52,17 +71,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Certificates
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Certificates that{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              validate my skills.
             </span>
           </h2>
 
@@ -70,8 +89,7 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+              A snapshot of my AI learning journey, showcasing certifications and hands-on projects as an intern building foundational skills.
           </p>
         </div>
 
@@ -127,6 +145,13 @@ export const Experience = () => {
                         </span>
                       ))}
                     </div>
+                    <Button
+                      size="sm"
+                      className="mt-4"
+                      onClick={() => window.open(exp.link, '_blank')}
+                    >
+                      View Certificate
+                    </Button>
                   </div>
                 </div>
               </div>

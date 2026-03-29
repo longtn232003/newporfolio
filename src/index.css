@@ -28,6 +28,21 @@
     scroll-behavior: smooth;
   }
 
+  .dark {
+    --color-background: #040607;
+    --color-foreground: #e7f1f3;
+    --color-card: #10161f;
+    --color-primary: #3ddfd3;
+    --color-primary-foreground: #081017;
+    --color-secondary: #15212b;
+    --color-secondary-foreground: #8be7e1;
+    --color-muted: #1b2731;
+    --color-muted-foreground: #95a2b0;
+    --color-border: #1d2a35;
+    --color-highlight: #a4f67c;
+    --color-surface: #121a23;
+  }
+
   button {
     cursor: pointer;
   }
@@ -113,7 +128,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
 
@@ -127,6 +142,18 @@
 
   .animate-marquee {
     animation: marquee 30s linear infinite;
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .animation-delay-100 {

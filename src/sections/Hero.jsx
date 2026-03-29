@@ -10,26 +10,31 @@ import {
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
-const skills = [
-  "Python",
-  "TypeScript",
-  "PyTorch",
-  "TensorFlow",
-  "Scikit-learn",
-  "Computer Vision",
-  "NLP",
-  "FastAPI",
-  "Node.js",
-  "Docker",
-  "Docker Compose",
-  "React",
-  "TypeScript",
-  "NumPy",
-  "Pandas",
-  "JavaScript",
-  "CSS",
-  "Git",
-  "OpenCV",
+const skillGroups = [
+  {
+    category: "Programming Languages",
+    skills: ["Python", "JavaScript", "HTML/CSS"],
+  },
+  {
+    category: "AI/ML Frameworks & Libraries",
+    skills: ["PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "OpenCV"],
+  },
+  {
+    category: "Domains",
+    skills: ["Computer Vision", "Natural Language Processing (NLP)", "Large Language Models (LLM)"],
+  },
+  {
+    category: "Backend & Deployment",
+    skills: ["FastAPI", "Docker", "Docker Compose"],
+  },
+  {
+    category: "Frontend",
+    skills: ["React"],
+  },
+  {
+    category: "Tools",
+    skills: ["Git"],
+  },
 ];
 
 export const Hero = () => {
@@ -78,12 +83,12 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Building <span className="text-primary glow-text">practical AI</span>
                 <br />
-                experiences with
+                for real-world
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  problems.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
@@ -174,12 +179,22 @@ export const Hero = () => {
               className="absolute right-0 top-0 bottom-0 w-32
              bg-gradient-to-l from-background to-transparent z-10"
             />
-            <div className="flex animate-marquee">
-              {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                    {skill}
-                  </span>
+            <div className="flex animate-marquee gap-8">
+              {[...skillGroups, ...skillGroups, ...skillGroups].map((group, idx) => (
+                <div key={`${group.category}-${idx}`} className="min-w-[340px] rounded-2xl glass p-6">
+                  <h3 className="text-base font-semibold text-white mb-3">
+                    {group.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {group.skills.map((skill) => (
+                      <span
+                        key={`${group.category}-${skill}`}
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-secondary-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

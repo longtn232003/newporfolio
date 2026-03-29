@@ -1,17 +1,43 @@
 import { Button } from "@/components/Button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#experience", label: "Certificates" },
+  { href: "#skills", label: "Skills" },
 ];
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    const preferDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const dark = storedTheme ? storedTheme === "dark" : preferDark;
+    setIsDarkMode(dark);
+    document.documentElement.classList.toggle("dark", dark);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle("dark", next);
+      localStorage.setItem("theme", next ? "dark" : "light");
+      return next;
+    });
+  };
+
+  const handleContactClick = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +60,7 @@ export const Navbar = () => {
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
+          L<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
@@ -52,18 +78,27 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
-        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-surface hover:bg-surface/80 transition"
+            aria-label="Toggle dark mode"
+          >
+            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <div className="hidden md:block">
+            <Button size="sm" onClick={handleContactClick}>Contact Me</Button>
+          </div>
+
+          <button
+            className="md:hidden p-2 text-foreground cursor-pointer"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -81,7 +116,7 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            <Button onClick={handleContactClick}>
               Contact Me
             </Button>
           </div>

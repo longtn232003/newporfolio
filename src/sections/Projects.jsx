@@ -59,8 +59,8 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A collection of my recent projects in AI and software development, where I apply machine learning, computer vision, 
+            and backend engineering to real-world use cases.
           </p>
         </div>
 

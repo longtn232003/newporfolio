@@ -49,19 +49,15 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate AI engineer with a strong foundation in computer science. 
-                My journey started with curiosity about intelligent systems, evolving into expertise in AI technologies like computer vision and large language models.
+                Graduated from FPT University, with a strong orientation toward Machine Learning and Deep Learning. 
+                Gained hands-on experience through AI projects involving data processing, model training, and application deployment using FastAPI and Docker.              </p>
+              <p>
+                Experienced in working on Computer Vision, Large Language Models (LLMs), 
+                and multimodal AI tasks, while also using frameworks such as PyTorch and TensorFlow in model development.
               </p>
               <p>
-                I specialize in Python, PyTorch, TensorFlow, and machine learning frameworks, 
-                building everything from innovative prototypes to scalable AI applications. 
-                My approach combines technical innovation with a focus on ethical AI and 
-                real-world impact.
-              </p>
-              <p>
-                When I'm not coding, you'll find me exploring new AI research, 
-                contributing to open-source projects, or sharing knowledge with the developer community.
-              </p>
+                A proactive learner, adaptable, and eager 
+                to continue growing in a real-world product development environment.              </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
